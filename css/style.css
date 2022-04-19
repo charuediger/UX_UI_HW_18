@@ -29,16 +29,19 @@ ul {
     height: 600px;
 }
 .content {
+    background-color: #074B8C;
+    background-color: rgba(7,75,140,0.35);
     text-align: right;
     position: absolute;
-    width: 500px;
+    max-width: 500px;
     margin: 0 auto;
     color: white;
+    padding: 25px;
 }
-button {
+.donate {
     background-color: #FF564D;
     font-size: 30px;
-    padding: 1%;
+    padding: 2%;
     text-align: center;
     font-style: bold;
     color: white;
@@ -49,48 +52,63 @@ h2 {
     color: white;
     font-family: 'Inria Sans', sans-serif; 
 }
-h3 {
-    font-size: 34px;
-    color: #074b8c;
-}
-p {
-    font-size: 20px;
-    color: #074b8c;   
-    font-family: 'Noto Sans', sans-serif; 
-}
 #containerGrid {
+    margin: 5px 5%;
     display: grid;
+    grid-template-rows: 630px 630px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-    'card1 card2 card3'
-    'card4 card5 card6';
+    "rufus bluey sirCharles"
+    "triumph sheRa ladyQ"
+    ;
+}
+.containerGridArea {  
+    display: grid;
+    margin: 5px;  
+    font-size: 24px;
     background-color: #E4EBF1;
-    padding: 50px;
+    background-size: 500px 300px;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #074b8c;
+    border: 2px solid #417BAB;
 }
-#card1 {
-    grid-area: card1;
-    width: 300px;
+.moreInfo {
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 18px;
+    color: white;
+    background-color: #074b8c;
+    height: 48px;
+    width: 130px;  
 }
-#card2 {
-    grid-area: card2;
-    width: 300px;
+.heading {
+    font-size: 34px; 
+    font-family: 'Inria Sans', sans-serif; 
+    margin: 15px;
 }
-#card3 {
-    grid-area: card3;
-    width: 300px;
+.description {
+    font-size: 20px;
+    font-family: 'Noto Sans', sans-serif;   
+    margin-bottom: 20px;
 }
-#card4 {
-    grid-area: card4;
-    width: 300px;
+#rufus {
+    grid-area: rufus;
 }
-#card5 {
-    grid-area: card5;
-    width: 300px;
+#bluey {
+    grid-area: bluey;
 }
-#card6 {
-    grid-area: card6;
-    width: 300px;
+#sirCharles {
+    grid-area: sirCharles;
+}
+#triumph {
+    grid-area: triumph;
+}
+#sheRa {
+    grid-area: sheRa;
+}
+#ladyQ {
+    grid-area: ladyQ;
 }
 /*.column {
     display: flex;
@@ -124,14 +142,13 @@ footer {
 }
 @media only screen and (max-width: 600px) {
     #containerGrid {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 500px 500px 500px 500px 500px 500px;grid-template-columns: 1fr;
         grid-template-areas: 
-        'card1'
-        'card2'
-        'card3'
-        'card4'
-        'card5'
-        'card6';
+        "rufus"
+        "bluey"
+        "sirCharles"
+        "triumph"
+        "sheRa"
+        "ladyQ";
     }
 }
